@@ -28,5 +28,8 @@ span {
 header {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
  }
