@@ -6,5 +6,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #e0cf77;
+  background-color: #d6a05e;
+  background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
 }
