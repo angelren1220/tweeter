@@ -1,6 +1,37 @@
-form .new-tweet {
+section.new-tweet {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+textarea {
+  width: 20em;
+  height: 40px;
+  resize: none;
+  background: transparent;
+  border-width: 0 0 5px 0;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+
+  border-width: 0;
+}
+
+output {
+
+}
+
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }
