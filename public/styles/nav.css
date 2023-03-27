@@ -1,16 +1,25 @@
 nav {
+  display: flex;
   height: 120px;
   width: auto;
   background-color: #4056A1;
   color: #FFFFFF;
+  align-content: center;
+  justify-content: space-between;
 }
 
 span {
   margin: 1.5em;
   font-family: 'Bungee', cursive;
+  font-size: larger;
 }
 
-#nav-arrow {
+.write-new-tweet{
+  margin: 0 1.5em;;
+}
+
+#nav-arrow{
   display: flex;
-  justify-content: right;
+  color: #df1f1fa4;
+  justify-content: center;
 }
