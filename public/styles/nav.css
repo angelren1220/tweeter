@@ -24,12 +24,3 @@ span {
   color: #df1f1fa4;
   justify-content: center;
 }
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 400px;
-  width: 100%;
- }
