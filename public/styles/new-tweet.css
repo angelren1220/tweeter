@@ -40,10 +40,6 @@ button {
   border-width: 0;
 }
 
-#over-size {
-  color: #9c0607
-}
-
 textarea:focus,
 button:focus {
   outline: none;

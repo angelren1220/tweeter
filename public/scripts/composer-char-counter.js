@@ -3,6 +3,6 @@ $('textarea').keyup(function() {
   let count = $('#count');
   count.text(characterCount);
   if (characterCount < 0) {
-    count.attr('id', 'over-size');
+    count.css('color', '#9c0607');
   }
 });
