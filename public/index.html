@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -38,7 +39,7 @@
       <i class="fa-solid fa-angles-down" id="nav-arrow"></i>
     </span>
   </nav>
-  <header>
+  <header class="avatar">
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -50,15 +51,31 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form action="/tweets/" method="POST">
+      <form class="write-new-tweet" action="/tweets/" method="POST">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div class="write-new-tweet">
+        <footer class="write-new-tweet">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text" id="count">140</output>
           <script src="./scripts/composer-char-counter.js"></script>
-        </div>
+        </footer>
       </form>
+    </section>
+    <section class="tweet-container">
+      <article>
+        <header class="tweet-header">
+          <img class="tweet-header" src="/images/oreo.jpeg">
+          <h4>Oreo</h4>
+        </header>
+        <p class="posted-tweet">Shiro opened a can for me. Had some treats, too! Yummy!</p>
+        <footer class="posted-tweet">
+          <label>just now</label>
+          <div class="tweet-reactions">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </article>
     </section>
   </main>
 </body>

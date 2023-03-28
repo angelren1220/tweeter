@@ -1,0 +1,53 @@
+section.tweet-container {
+  padding: 1em 0;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: transparent;
+}
+
+article {
+  width: 90%;
+  border-style: solid;
+  border-width: 5px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header.tweet-header {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+}
+
+img.tweet-header {
+  height: 10%;
+  width: 10%;
+}
+
+p.posted-tweet {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+footer.posted-tweet{
+  width: 90%;
+  padding-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  border-style: groove;
+  border-width: 5px 0 0 0;
+}
+
+form.tweet-reactions {
+  display: flex;
+  justify-content: flex-end;
+}
