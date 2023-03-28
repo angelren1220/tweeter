@@ -7,6 +7,6 @@ $('textarea').keyup(function() {
   let count = $('#count');
   count.text(characterCount);
   if (characterCount < 0) {
-    count.css('color', '#9c0607');
+    count.attr('id', 'new-color');
   }
 });

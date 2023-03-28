@@ -26,8 +26,8 @@ button {
   border-width: 0;
 }
 
-output {
-
+#new-color {
+  color: #9c0607
 }
 
 select:focus,
