@@ -16,8 +16,10 @@ span {
   font-size: larger;
 }
 
-.write-new-tweet{
-  margin: 0 1.5em;;
+div.arrow-text{
+  display: flex;
+  margin: 0 1.5em;
+  flex-direction: column;
 }
 
 #nav-arrow{

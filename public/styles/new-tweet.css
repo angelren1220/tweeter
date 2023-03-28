@@ -13,7 +13,7 @@ textarea {
   border-width: 0 0 5px 0;
 }
 
-div {
+div.write-new-tweet {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
