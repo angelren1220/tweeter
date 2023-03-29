@@ -5,9 +5,13 @@
  */
 
 $(document).ready(function() {
-  $('.write-new-tweet').on('submit', function(event) {
+  $('.write-new-tweet').submit(function(event) {
     event.preventDefault();
+    const newTweet = $(this).serialize();
+    console.log(newTweet);
+    $.post("/tweets/", newTweet);
   });
+
   const createTweetElement = function(data) {
     const $tweet = $(`<article class="tweet">
     <script src="./scripts/hover.js"></script>
