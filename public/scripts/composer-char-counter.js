@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // count chars input in new tweet
   $('textarea').keyup(function() {
-    let characterCount = 10 - $(this).val().length;
+    let characterCount = 140 - $(this).val().length;
     let count = $('output');
     count.text(characterCount);
 

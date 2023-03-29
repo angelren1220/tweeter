@@ -5,6 +5,9 @@
  */
 
 $(document).ready(function() {
+  $('.write-new-tweet').on('submit', function(event) {
+    event.preventDefault();
+  });
   const createTweetElement = function(data) {
     const $tweet = $(`<article class="tweet">
     <script src="./scripts/hover.js"></script>
