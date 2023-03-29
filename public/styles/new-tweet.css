@@ -44,3 +44,7 @@ textarea:focus,
 button:focus {
   outline: none;
 }
+
+.red {
+  color: red;
+}

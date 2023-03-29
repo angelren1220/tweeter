@@ -10,7 +10,7 @@ $(document).ready(function() {
     <script src="./scripts/hover.js"></script>
     <header class="tweet-header">
       <img class="tweet-header" src=${data.user.avatars}>
-      <h4>${data.user.name}</h4>
+      <h4>${data.user.name}</h4><p class="handle">${data.user.handle}</p>
     </header>
     <p class="posted-tweet">${data.content.text}</p>
     <footer class="posted-tweet">
