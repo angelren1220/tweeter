@@ -7,6 +7,8 @@
 $(document).ready(function() {
   $('.write-new-tweet').submit(function(event) {
     event.preventDefault();
+    let button = $('button');
+    button.addClass('highlight');
     const newTweet = $(this).serialize();
     
     // do not let user submit empty string
@@ -19,7 +21,7 @@ $(document).ready(function() {
       return alert("Exceed the words limit!");
     }
 
-    $.post("/tweets", newTweet, loadTweets());
+    $.post("/tweets", newTweet, window.location.reload());
     
   });
 

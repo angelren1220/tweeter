@@ -48,3 +48,7 @@ button:focus {
 .red {
   color: #b01a1a;
 }
+
+.highlight {
+  box-shadow: 0 0 5px 5px #938ce2;
+}
