@@ -5,23 +5,34 @@
  */
 
 $(document).ready(function() {
+
+  // function to escape unsafe characters
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   $('.write-new-tweet').submit(function(event) {
     event.preventDefault();
     let button = $('button');
     button.addClass('highlight');
+    
     const newTweet = $(this).serialize();
+    // const safeText = `<p>${escape(newTweet)}</p>`;
+    // console.log(safeText);
     
     // do not let user submit empty string
     if(!newTweet.slice(5)){
-      return alert("Write something to tweet!");
+      return $('.validation1').slideDown().delay(1000).slideUp();
     }
 
     // do not let user submit string overlimit
     if(newTweet.slice(5).length > 140){
-      return alert("Exceed the words limit!");
+      return $('.validation2').slideDown().delay(1000).slideUp();
     }
 
-    $.post("/tweets", newTweet, window.location.reload());
+    $.post("/tweets", newTweet, loadTweets());
     
   });
 

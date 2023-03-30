@@ -45,7 +45,7 @@ button:focus {
   outline: none;
 }
 
-.red {
+.validation1, .validation2, .red{
   color: #b01a1a;
 }
 
