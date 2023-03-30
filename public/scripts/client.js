@@ -19,6 +19,16 @@ $(document).ready(function() {
     $('.new-tweet').toggle('slow');
   });
 
+  // click to scroll down to the bottom of the page
+  $('.down').click(function() {
+    $(window).scrollTop($(window).height());
+  });
+
+  // click to scroll up to the top of the page
+  $('.up').click(function() {
+    $(window).scrollTop(0);
+  });
+
   $('.write-new-tweet').submit(function(event) {
     event.preventDefault();
     let button = $('button');

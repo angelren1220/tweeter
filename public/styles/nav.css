@@ -16,14 +16,15 @@ span.logo {
   font-size: 1.5em;
 }
 
-span.write-toggle{
+span.arrow-text{
   display: flex;
   margin: 0 1.5em;
   flex-direction: column;
 }
 
-#nav-arrow{
+.nav-arrow{
   display: flex;
   color: #d6a05e;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
