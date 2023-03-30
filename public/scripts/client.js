@@ -7,9 +7,20 @@
 $(document).ready(function() {
   $('.write-new-tweet').submit(function(event) {
     event.preventDefault();
-    const newTweet = $(this).serialize();
-    console.log(newTweet);
-    $.post("/tweets/", newTweet);
+    const newTweet = $(this).serialize().slice(5);
+    
+    // do not let user submit empty string
+    if(!newTweet){
+      return alert("Write something to tweet!");
+    }
+
+    // do not let user submit string overlimit
+    if(newTweet.length > 140){
+      return alert("Exceed the words limit!");
+    }
+
+    $.post("/tweets", newTweet); // what should be the callback here?
+    
   });
 
   // count chars input in new tweet
