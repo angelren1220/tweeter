@@ -7,19 +7,19 @@
 $(document).ready(function() {
   $('.write-new-tweet').submit(function(event) {
     event.preventDefault();
-    const newTweet = $(this).serialize().slice(5);
+    const newTweet = $(this).serialize();
     
     // do not let user submit empty string
-    if(!newTweet){
+    if(!newTweet.slice(5)){
       return alert("Write something to tweet!");
     }
 
     // do not let user submit string overlimit
-    if(newTweet.length > 140){
+    if(newTweet.slice(5).length > 140){
       return alert("Exceed the words limit!");
     }
 
-    $.post("/tweets", newTweet); // what should be the callback here?
+    $.post("/tweets", newTweet, loadTweets());
     
   });
 
@@ -75,7 +75,10 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function(data) {
-        renderTweets(data);;
+        renderTweets(data);
+      })
+      .catch(function(err) {
+        console.log(err);
       });
   };
 
