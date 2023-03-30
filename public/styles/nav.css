@@ -13,10 +13,10 @@ nav {
 span.logo {
   margin: 1.5em;
   font-family: 'Bungee', cursive;
-  font-size: larger;
+  font-size: 1.5em;
 }
 
-span.arrow-text{
+span.write-toggle{
   display: flex;
   margin: 0 1.5em;
   flex-direction: column;
