@@ -6,13 +6,6 @@
 
 $(document).ready(function() {
 
-  // function to escape unsafe characters
-  const escape = function(str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
-
   // click to hide the new tweet text area
   $('.write-toggle').click(function() {
     $('.new-tweet').toggle('slow');
@@ -31,12 +24,13 @@ $(document).ready(function() {
   // write a new tweet and post
   $('.write-new-tweet').submit(function(event) {
     event.preventDefault();
+
+    // highlight the button
     let button = $('button');
     button.addClass('highlight');
 
+    // stringfy the input
     const newTweet = $(this).serialize();
-    // const safeText = `<p>${escape(newTweet)}</p>`;
-    // console.log(safeText);
 
     // do not let user submit empty string
     if (!newTweet.slice(5)) {
@@ -47,9 +41,11 @@ $(document).ready(function() {
     if (newTweet.slice(5).length > 140) {
       return $('.validation2').slideDown().delay(1000).slideUp();
     }
-
+    
     $.post("/tweets", newTweet, loadTweets());
-
+    
+    // clear textarea after post
+    // $('textarea').empty();
   });
 
   // count chars input in new tweet
@@ -66,6 +62,13 @@ $(document).ready(function() {
     }
   });
 
+  // escape unsafe input
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // create a new tweet element
   const createTweetElement = function(data) {
     const formattedTime = timeago.format(data.created_at);
@@ -75,7 +78,7 @@ $(document).ready(function() {
     <img class="tweet-header" src=${data.user.avatars}>
     <h4>${data.user.name}</h4><p class="handle">${data.user.handle}</p>
     </header>
-    <p class="posted-tweet">${data.content.text}</p>
+    <p class="posted-tweet">${escape(data.content.text)}</p>
     <footer class="posted-tweet">
     ${formattedTime}
     <div class="tweet-reactions">
