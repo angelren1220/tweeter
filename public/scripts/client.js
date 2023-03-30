@@ -27,6 +27,7 @@ $(document).ready(function() {
   });
 
   const createTweetElement = function(data) {
+    const formattedTime = timeago.format(data.created_at);
     const $tweet = $(`<article class="tweet">
     <script src="./scripts/hover.js"></script>
     <header class="tweet-header">
@@ -35,7 +36,7 @@ $(document).ready(function() {
     </header>
     <p class="posted-tweet">${data.content.text}</p>
     <footer class="posted-tweet">
-    ${data.created_at}
+    ${formattedTime}
     <div class="tweet-reactions">
     <i class="fa-solid fa-flag"></i>
     <script src="./scripts/hover.js"></script>
