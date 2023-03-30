@@ -13,7 +13,6 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
-
   // click to hide the new tweet text area
   $('.write-toggle').click(function() {
     $('.new-tweet').toggle('slow');
@@ -29,6 +28,7 @@ $(document).ready(function() {
     $(window).scrollTop(0);
   });
 
+  // write a new tweet and post
   $('.write-new-tweet').submit(function(event) {
     event.preventDefault();
     let button = $('button');
@@ -66,6 +66,7 @@ $(document).ready(function() {
     }
   });
 
+  // create a new tweet element
   const createTweetElement = function(data) {
     const formattedTime = timeago.format(data.created_at);
     const $tweet = $(`<article class="tweet">
@@ -90,13 +91,16 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // render all tweet elements
   const renderTweets = function(tweets) {
+    // clear the previous container
+    $('#tweet-container').empty();
     // loops through tweets
     tweets.forEach(tweet => {
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
-      // takes return value and appends it to the tweets container
-      $('#tweet-container').append($tweet);
+      // takes return value and prepends it to the tweets container
+      $('#tweet-container').prepend($tweet);
     });
   };
 
