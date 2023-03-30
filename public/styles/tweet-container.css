@@ -6,6 +6,7 @@ section.tweet-container {
   justify-content: center;
   flex-direction: column;
   background: transparent;
+  
 }
 
 article {

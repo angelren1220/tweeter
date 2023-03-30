@@ -16,7 +16,6 @@ html {
 
 body {
   display: flex;
-  align-items: center;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -38,6 +37,7 @@ body {
 
  @media only screen and (min-width: 320px) {
   body {
+    align-items: center;
     justify-content: center;
     flex-direction: column;
   } 
@@ -46,6 +46,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   body {
+    align-items: flex-start;
     justify-content: space-around;
     flex-direction: row;
   }

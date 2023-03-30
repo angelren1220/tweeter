@@ -1,11 +1,25 @@
 header.avatar {
-  padding-top: 120px;
-  height: calc(120px + 400px);
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #d6a05e;
   background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
+}
+
+@media only screen and (min-width: 320px) {
+  header.avatar {
+    padding-top: 120px;
+    height: calc(120px + 400px);
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  header.avatar {
+    margin: 150px 0 0 30px;
+    width: 50%;
+    height: 50%;
+  }
 }

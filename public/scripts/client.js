@@ -5,6 +5,12 @@
  */
 
 $(document).ready(function() {
+  // nav down arrow animation
+  // const animateDownArrow = function() {
+  //   $('.down').animate( {"bottom": "+=50"}, 5000);
+  //   console.log("arrow down");
+  // }
+  // animateDownArrow();
 
   // click to hide the new tweet text area
   $('.write-toggle').click(function() {

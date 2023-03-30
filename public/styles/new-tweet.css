@@ -1,5 +1,4 @@
 section.new-tweet {
-  padding: 1em 0;
   width: 90%;
   display: flex;
   align-items: center;
@@ -45,10 +44,24 @@ button:focus {
   outline: none;
 }
 
-.validation1, .validation2, .red{
+.validation1,
+.validation2,
+.red {
   color: #b01a1a;
 }
 
 .highlight {
   box-shadow: 0 0 5px 5px #938ce2;
+}
+
+@media only screen and (min-width: 320px) {
+  section.new-tweet {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  section.new-tweet {
+    margin-top: 200px;
+  }
 }
