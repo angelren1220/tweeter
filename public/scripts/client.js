@@ -8,10 +8,7 @@ $(document).ready(function() {
   // click to hide the new tweet text area
   $('.write-toggle').click(function() {
     $('.new-tweet').toggle('slow');
-    if($('textarea')) {
-      // auto foucs on textarea
-      $('textarea').focus();
-    }
+    $('textarea').focus();
   });
 
   // click to scroll down to the bottom of the page
@@ -32,22 +29,22 @@ $(document).ready(function() {
     let button = $('button');
     button.addClass('highlight');
 
-    
+
     let characterCount = $('textarea').val().length;
     // do not let user submit empty string
     if (!characterCount) {
       return $('.validation1').slideDown().delay(1000).slideUp();
     }
-    
+
     // do not let user submit string overlimit
     if (characterCount > 140) {
       return $('.validation2').slideDown().delay(1000).slideUp();
     }
     // serialize the form
     const newTweet = $(this).serialize();
-    
+
     // post the new tweet
-    $.post("/tweets", newTweet, function(){
+    $.post("/tweets", newTweet, function() {
       // clear the text area
       $('textarea').val('');
       // reset the count
@@ -57,7 +54,7 @@ $(document).ready(function() {
       // reload the tweets
       loadTweets();
     });
-    
+
     // clear textarea after post
   });
 
@@ -76,7 +73,7 @@ $(document).ready(function() {
   });
 
   // escape unsafe input
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;

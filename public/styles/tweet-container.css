@@ -71,3 +71,9 @@ form.tweet-reactions {
 .article-hover {
   box-shadow: 12px 12px 2px 1px #dad8f0;
 }
+
+@media only screen and (min-width: 768px) {
+  section.tweet-container {
+    margin-top: 100px;
+  }
+}
