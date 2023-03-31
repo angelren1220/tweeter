@@ -8,6 +8,10 @@ $(document).ready(function() {
   // click to hide the new tweet text area
   $('.write-toggle').click(function() {
     $('.new-tweet').toggle('slow');
+    if($('textarea')) {
+      // auto foucs on textarea
+      $('textarea').focus();
+    }
   });
 
   // click to scroll down to the bottom of the page
