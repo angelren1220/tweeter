@@ -2,18 +2,24 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+This repository is the forked and cloned and then implemented to practice HTML, CSS, JS, jQuery and AJAX front-end skills, and Node, Express back-end skills.
+
+## Final Product
+
+!["Full-window size app"](https://github.com/angelren1220/tinyapp/blob/main/docs/urls-page-unlogin.png)
+!["Error message and modified counter for input that exceeded word limit"](https://github.com/angelren1220/tinyapp/blob/main/docs/urls-page-loggedin.png)
+!["Short url show page"](https://github.com/angelren1220/tinyapp/blob/main/docs/url-show-page.png)
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-npm install -g sass
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+- Install dependencies using the `npm install` command.
+- Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 
 ## Dependencies
-
-- Express
+- body-parser
+- chance
+- express
+- md5
+- sass
+- nodemon
 - Node 5.10.x or above

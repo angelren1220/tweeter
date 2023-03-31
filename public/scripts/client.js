@@ -26,7 +26,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     // highlight the button
-    let button = $('button');
+    let button = $('.tweet-button');
     button.addClass('highlight');
 
 
