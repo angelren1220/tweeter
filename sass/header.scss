@@ -10,10 +10,12 @@ header.avatar {
 @media only screen and (min-width: 320px) {
   header.avatar {
     padding-top: 120px;
-    height: 520px;
+    height: calc(120px + 400px);
     width: 100%;
   }
+
 }
+
 @media only screen and (min-width: 768px) {
   header.avatar {
     margin: 150px 0 0 30px;

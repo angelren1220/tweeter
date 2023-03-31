@@ -5,13 +5,6 @@
  */
 
 $(document).ready(function() {
-  // nav down arrow animation
-  // const animateDownArrow = function() {
-  //   $('.down').animate( {"bottom": "+=50"}, 5000);
-  //   console.log("arrow down");
-  // }
-  // animateDownArrow();
-
   // click to hide the new tweet text area
   $('.write-toggle').click(function() {
     $('.new-tweet').toggle('slow');
@@ -91,8 +84,11 @@ $(document).ready(function() {
     const $tweet = $(`<article class="tweet">
     <header class="tweet-header">
     <script type="text/javascript" src="/scripts/hover.js"></script>
+    <div class="user-info">
     <img class="tweet-header" src=${data.user.avatars}>
-    <h4>${data.user.name}</h4><p class="handle">${data.user.handle}</p>
+    <h4>${data.user.name}</h4>
+    </div>
+    <div class="handle">${data.user.handle}</div>
     </header>
     <p class="posted-tweet">${escape(data.content.text)}</p>
     <footer class="posted-tweet">

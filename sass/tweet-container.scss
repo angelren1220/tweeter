@@ -6,6 +6,7 @@ section.tweet-container {
   justify-content: center;
   flex-direction: column;
   background: transparent;
+  
 }
 
 article {
@@ -23,24 +24,13 @@ header.tweet-header {
   width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.user-info{
-  display: flex;
-  align-items: center;
   justify-content: flex-start;
   flex-direction: row;
 }
 
-.handle{
-  color: #8880e9;
-}
-
 img.tweet-header {
-  height: 50%;
-  width: 50%;
+  height: 10%;
+  width: 10%;
 }
 
 p.posted-tweet {

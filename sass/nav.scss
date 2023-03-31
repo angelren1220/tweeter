@@ -10,17 +10,17 @@ nav {
 
 span.logo {
   margin: 1.5em;
-  font-family: "Bungee", cursive;
+  font-family: 'Bungee', cursive;
   font-size: 1.5em;
 }
 
-span.arrow-text {
+span.arrow-text{
   display: flex;
   margin: 0 1.5em;
   flex-direction: column;
 }
 
-.nav-arrow {
+.nav-arrow{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -31,8 +31,10 @@ span.arrow-text {
   nav {
     color: #4056A1;
     background-color: transparent;
-  }
+  } 
+
 }
+
 @media only screen and (min-width: 768px) {
   nav {
     color: #FFFFFF;
