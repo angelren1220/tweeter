@@ -35,23 +35,33 @@ $(document).ready(function() {
     let button = $('button');
     button.addClass('highlight');
 
-    // stringfy the input
-    const newTweet = $(this).serialize();
-
+    
+    let characterCount = $('textarea').val().length;
     // do not let user submit empty string
-    if (!newTweet.slice(5)) {
+    if (!characterCount) {
       return $('.validation1').slideDown().delay(1000).slideUp();
     }
-
+    
     // do not let user submit string overlimit
-    if (newTweet.slice(5).length > 140) {
+    if (characterCount > 140) {
       return $('.validation2').slideDown().delay(1000).slideUp();
     }
+    // serialize the form
+    const newTweet = $(this).serialize();
     
-    $.post("/tweets", newTweet, loadTweets());
+    // post the new tweet
+    $.post("/tweets", newTweet, function(){
+      // clear the text area
+      $('textarea').val('');
+      // reset the count
+      $('output').text("140");
+      // disable the button highlight
+      button.removeClass('highlight');
+      // reload the tweets
+      loadTweets();
+    });
     
     // clear textarea after post
-    // $('textarea').empty();
   });
 
   // count chars input in new tweet
