@@ -9,7 +9,7 @@ $(document).ready(function() {
     article.removeClass('article-hover');
   });
 
-  // hover of tweet reaction icons
+  // hover for tweet reaction icons
   $('i').mouseover(function() {
     const icon = $(this);
     icon.addClass('icon-hover');
@@ -17,6 +17,16 @@ $(document).ready(function() {
   $('i').mouseout(function() {
     const icon = $(this);
     icon.removeClass('icon-hover');
+  });
+
+  // hover for write toggle
+  $('.write-toggle').mouseover(function() {
+    const icon = $(this);
+    icon.addClass('button-hover');
+  });
+  $('.write-toggle').mouseout(function() {
+    const icon = $(this);
+    icon.removeClass('button-hover');
   });
 
 });

@@ -27,14 +27,14 @@ header.tweet-header {
   flex-direction: row;
 }
 
-.user-info{
+.user-info {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
 }
 
-.handle{
+.handle {
   color: #8880e9;
 }
 

@@ -16,8 +16,12 @@ span.logo {
 
 span.arrow-text {
   display: flex;
-  margin: 0 1.5em;
+  margin: 1.5em;
   flex-direction: column;
+}
+
+.write-toggle {
+  background-color: transparent;
 }
 
 .nav-arrow {
@@ -27,15 +31,25 @@ span.arrow-text {
   color: #d6725e;
 }
 
+
 @media only screen and (min-width: 320px) {
   nav {
     color: #4056A1;
     background-color: transparent;
   }
+
+  .button-hover {
+    color: #4056A1;
+  }
 }
+
 @media only screen and (min-width: 768px) {
   nav {
     color: #FFFFFF;
     background-color: #4056A1;
+  }
+
+  .button-hover {
+    color: #d6a05e;
   }
 }
