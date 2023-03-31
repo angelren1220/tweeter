@@ -6,9 +6,9 @@ This repository is the forked and cloned and then implemented to practice HTML, 
 
 ## Final Product
 
-!["Full-window size app"](https://github.com/angelren1220/tinyapp/blob/main/docs/urls-page-unlogin.png)
-!["Error message and modified counter for input that exceeded word limit"](https://github.com/angelren1220/tinyapp/blob/main/docs/urls-page-loggedin.png)
-!["Short url show page"](https://github.com/angelren1220/tinyapp/blob/main/docs/url-show-page.png)
+!["Full-window size app"](https://github.com/angelren1220/tweeter/blob/master/docs/full-window.png)
+!["Tablet and mobile size app and hover"](https://github.com/angelren1220/tweeter/blob/master/docs/tablet-size-and-hover.png)
+!["Error message and modified counter for input that exceeded word limit"](https://github.com/angelren1220/tweeter/blob/master/docs/word-limit.png)
 
 ## Getting Started
 
